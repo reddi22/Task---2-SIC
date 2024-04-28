@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculator</title>
+    <link rel="stylesheet" href="SIC.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title"> Simple Interest Calculator</h1>
+        <div class="language-container">
+            <label for="language" id="language-heading">Language:</label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="telugu">Telugu</option>
+                <option value="tamil">Tamil</option>
+                <option value="hindi">Hindi</option>
+                <option value="english" selected>English</option>
+            </select>
+        </div>
+        <div class="left-right">
+            <div class="left">
+
+                <div>
+                    <label for="from-date" id="from-date-label">From Date:</label>
+                    <input type="date" id="from-date">
+                </div>
+                <div>
+                    <label for="to-date" id="to-date-label">To Date:</label>
+                    <input type="date" id="to-date">
+                </div>
+                <div>
+                    <label for="principal-amount" id="principal-amount-label">Principal Amount:</label>
+                    <input type="number" id="principal-amount" step="0.01">
+                </div>
+                <div>
+                    <label for="interest-rate" id="interest-rate-label">Interest Rate (%):</label>
+                    <input type="number" id="interest-rate" step="0.01">
+                </div>
+                <button onclick="calculateInterest()" id="calculate-button">Calculate</button>
+                <div id="result"></div>
+
+            </div>
+            <div class="right">
+                <div>
+                    <label for="num-days" id="num-days-label">Number of Days:</label>
+                    <input type="text" id="num-days" readonly>
+                </div>
+                <div>
+                    <label for="interest-per-day" id="interest-per-day-label">Interest Per Day:</label>
+                    <input type="text" id="interest-per-day" readonly>
+                </div>
+                <div>
+                    <label for="total-interest" id="total-interest-label">Total Interest:</label>
+                    <input type="text" id="total-interest" readonly>
+                </div>
+
+                <div>
+                    <label for="total-amount" id="total-amount-label">Total Amount:</label>
+                    <input type="text" id="total-amount" readonly>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="SIC.js"></script>
+</body>
+
+</html>
